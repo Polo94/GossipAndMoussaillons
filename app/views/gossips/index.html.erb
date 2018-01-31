@@ -1,0 +1,18 @@
+<h1> Bienvenue sur mon site de potins !! </h1>
+
+<table>
+  <tr>
+    <th>Auteur</th>
+    <th>Contenu</th>
+  </tr>
+ 
+  <% @gossips.each do |gossip| %>
+    <tr>
+      <td><%= gossip.anonymous_author %></td>
+      <td><%= gossip.content %></td>   
+    </tr>
+  <% end %>
+</table>
+
+<br/>
+<p> <%= link_to 'Un pti gossip encore ?', new_gossip_path %> </p>

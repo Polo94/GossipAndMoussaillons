@@ -9,4 +9,11 @@
 </p>
 
 <p> <%= link_to 'retour', gossips_path %> </p>
-<p> <%= link_to('Modifier le gossip', edit_gossip_path) %> </p> 
+<p> <%= link_to'Modifier le gossip', edit_gossip_path %> </p> 
+<p> <%= link_to "Détruire le gossip", gossip_path(@gossip),method: :delete %> </p>
+<p> <%= link_to'Index', root_path %> </p> 
+
+</br>
+
+<p> <%= link_to 'Un pti gossip encore ?', new_gossip_path %> </p> 
+
