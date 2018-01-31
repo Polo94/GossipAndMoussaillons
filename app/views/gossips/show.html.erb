@@ -1,11 +1,12 @@
  
-
  <p>
-  <strong>Auteur_du_ragot</strong>
-  <%= @gossip.anonymous_author %>
-</p>
+ 	<strong>Auteur_du_ragot</strong><%= @gossip.anonymous_author %>
+ </p>
 
 <p>
   <strong>Ragot</strong>
   <%= @gossip.content %>
 </p>
+
+<p> <%= link_to 'retour', gossips_path %> </p>
+<p> <%= link_to('Modifier le gossip', edit_gossip_path) %> </p> 

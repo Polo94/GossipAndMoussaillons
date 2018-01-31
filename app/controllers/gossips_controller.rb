@@ -1,13 +1,15 @@
 class GossipsController < ApplicationController
  
+
   def new
   	@gossip = Gossip.new
   end
 
   def create	
   	@gossip = Gossip.new(gossip_params)
-  	@gossip.save
+  	if @gossip.save
   	redirect_to @gossip
+  	end
   end
 
   def show
@@ -16,5 +18,11 @@ class GossipsController < ApplicationController
 
 	def gossip_params
 	params.require(:gossip).permit(:anonymous_author, :content)
+	end
+
+	def edit	
+	end
+
+	def update
 	end
 end
